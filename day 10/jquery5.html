@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>	jquery 5</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    	   $(document).ready(function()
+    	   {
+    	   	 $("#TxtTestFocus").focus(function()
+    	       {
+    	   		$(this).css("background-color","red");
+    	   	   });
+
+    	   	 $("#TxtTestBlur").blur(function()
+    	       {
+    	   		$(this).css("background-color","yellow");
+    	   	   });
+    	   	 $("#TxtTestKeyprees").keyprees(function()
+    	       {
+    	   		alert($(this).val());
+    	   	   });
+    	   		$("#TxtTestKeyup").keyup(function()
+    	       {
+    	   		alert($(this).val());
+    	   	   });
+    	   });
+
+    </script>
+</head>
+<body>
+      <input type="text" id="TxtTestFocus" placeholder="check text"><br>
+      <input type="text" id="TxtTestBlur" placeholder="check text"><br>
+      <input type="text" id="TxtTestKeyprees" placeholder="check text"><br>
+      <input type="text" id="TxtTestKeyup" placeholder="check text"><br>
+</body>
+</html>

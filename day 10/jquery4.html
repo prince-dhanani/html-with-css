@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jquery 4	</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+    	$(document).ready(function()
+    	{ 
+    		$("#div1").click(function()
+    		{
+    			$("#div2").slideToggle("slow");
+    		});
+    	});
+    </script>
+    <style>
+    	#div1,#div2 {
+    		padding: 5px;
+    		text-align: center;
+    		background-color: gray;
+    		border: solid 1px black;
+    	}
+    	#div2
+    	{
+    		padding: 50px;
+    		display: none;
+    	}
+    </style>
+</head>
+<body>
+       <div id="div1">click to slide down panal</div>
+       <div id="div2">hyy......</div>
+</body>
+</html>
