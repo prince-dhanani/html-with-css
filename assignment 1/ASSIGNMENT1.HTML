@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRINCE RESUME</title>
+<style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #585c68;
+  font-size: 14px;
+  line-height: 22px;
+  color: #555555;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.semi-bold {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.resume {
+  width: 800px;
+  height: auto;
+  display: flex;
+  margin: 50px auto;
+}
+
+.resume .resume_left {
+  width: 280px;
+  background: #0bb5f4;
+}
+
+.resume .resume_left .resume_profile {
+  width: 100%;
+  height: 280px;
+}
+
+.resume .resume_left .resume_profile img {
+  width: 100%;
+  height: 100%;
+}
+
+.resume .resume_left .resume_content {
+  padding: 0 25px;
+}
+
+.resume .title {
+  margin-bottom: 20px;
+}
+
+.resume .resume_left .bold {
+  color: #fff;
+}
+
+.resume .resume_left .regular {
+  color: #b1eaff;
+}
+
+.resume .resume_item {
+  padding: 25px 0;
+  border-bottom: 2px solid #b1eaff;
+}
+
+.resume .resume_left .resume_item:last-child,
+.resume .resume_right .resume_item:last-child {
+  border-bottom: 0px;
+}
+
+.resume .resume_left ul li {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.resume .resume_left ul li:last-child {
+  margin-bottom: 0;
+}
+
+.resume .resume_left ul li .icon {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  color: #0bb5f4;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  position: relative;
+}
+
+.resume .icon i,
+.resume .resume_right .resume_hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.resume .resume_left ul li .data {
+  color: #b1eaff;
+}
+
+.resume .resume_left .resume_skills ul li {
+  display: flex;
+  margin-bottom: 10px;
+  color: #b1eaff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume .resume_left .resume_skills ul li .skill_name {
+  width: 25%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress {
+  width: 60%;
+  margin: 0 5px;
+  height: 5px;
+  background: #009fd9;
+  position: relative;
+}
+
+.resume .resume_left .resume_skills ul li .skill_per {
+  width: 15%;
+}
+
+.resume .resume_left .resume_skills ul li .skill_progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+}
+
+.resume .resume_left .resume_social .semi-bold {
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+.resume .resume_right {
+  width: 520px;
+  background: #fff;
+  padding: 25px;
+}
+
+.resume .resume_right .bold {
+  color: #0bb5f4;
+}
+
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+.resume .resume_right ul li {
+  position: relative;
+}
+
+.resume .resume_right ul li .date {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.resume .resume_right ul li .info {
+  margin-bottom: 20px;
+}
+
+.resume .resume_right ul li:last-child .info {
+  margin-bottom: 0;
+}
+
+.resume .resume_right .resume_work ul li:before,
+.resume .resume_right .resume_education ul li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -25px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid #0bb5f4;
+}
+
+.resume .resume_right .resume_work ul li:after,
+.resume .resume_right .resume_education ul li:after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -21px;
+  width: 2px;
+  height: 115px;
+  background: #0bb5f4;
+}
+
+.resume .resume_right .resume_hobby ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume .resume_right .resume_hobby ul li {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #0bb5f4;
+  border-radius: 50%;
+  position: relative;
+  color: #0bb5f4;
+}
+
+.resume .resume_right .resume_hobby ul li i {
+  font-size: 30px;
+}
+
+.resume .resume_right .resume_hobby ul li:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -52px;
+  width: 50px;
+  height: 2px;
+  background: #0bb5f4;
+}
+
+.resume .resume_right .resume_hobby ul li:last-child:before {
+  display: none;
+}
+</style>
+
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<div class="resume">
+   <div class="resume_left">
+     <div class="resume_profile">
+       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAMAAABmmnOVAAAAaVBMVEX///8rLzKkpaYWHCAAAAAoLC8HEBb5+fn09PSQkZMeIycbICSUlZbGx8dzdXfMzc2wsbKIiYowNDcRGBxKTU8iJypdX2He3t4AAAl4entmaGnV1da4ubrl5uZXWltRVFZCRUecnZ44Oz7RtETSAAADhklEQVR4nO2ai3KqMBBACyEBgwEFIshDwf//yAu1tsUqsmGXdubmfMGZ7CNkl7c3i8VisVgslt8kqGq3p66CXxJo6ij0CsF6ROGFUd2sbeCrKEkldz7hMk0i5a/pEJ/Ed4ObhzjFqyk0pafvDa5or1wpKDspHysMSLlbQcHfix+BGAVF7Mkzwy/FlMKAKIkt/HP4ysFxwjOphR+x1w6OwyJKi83LWHxEZEPnUM906C1qKgc/nayL7/CUKiD7WQlxhe1pHPLZwXgPSE4iEU00yp/IiMIhd2ZnxAB3KI6iSyEOjpN2BBIJ6CD6o0jwHSrgQfRHUaFLuID6vMJcdIkjqDYG5BFdIgOmRJ8UGbaDD06JPimwW3fgwSU87NdIYyKB/dGbm0hg98w/IfEncsI3kcCuDh96dQyXB/rXVfnk5fccXWI7vG1nPDjGhFt0CQW/wBS6RAC/ygnGNyXwGpX4KdG/fIDxYBTvnwB2mfOMZJi2g707aIYlPuQoeEb0DlSA1u3h1+cH86YTA4zk/fVOkM3s3ZomK69U856C3MF/cnwj9mZYcI94phqnLyOiU/K5rrq8aN/yQlYYX+TtZI2wlmY6cs9GPA2JppzbjclL8TAmUpTrHMMVddDsrk4404cVsmFE3rWFYFrzHq2ZKNpuzVP4JKi30eGcZedDtK1/aws24Ac9q26d/hJq4maoVsnNxs2YPKiHKRD0RRO2LvUaLOguw/ZJi/Z4n4pBfWyHLsbFpSPN0p2+Dfq5FMXl2O1UXFWx2nXHS/G5peQpp9vG5e1418BlyMJ3WDhek/KU6AbxXQl4E2vpEhRu8HoNOEaU6JmRc/gwlSOHRHHweKIPCUdtGur+ypwHDxEt1JzP24cWeG8gFRo6DFWM9NGbJwb5cEMnONm5xGH4+MZwOIInZmNChLXH/NX0M5avrBv4EPUeniy928uFwRgIF47QYoOFz08WPk5Piyrjhj4tcYAMiKZY0jj9A8pB9EdxMP+4iMHz7Gcw86xY2qe+MO9YDexnhSm4Y9oroNPsKYwn3dC5/hTGM3+k+rzimTmoAlOiMKsP+NZrCsONWITUqa5oo2l30KIV6ABvTd5CDcoF+kVq0ilgP5i9xugXNIUtYXKTwlZeMyRMZhYudk6Y/PG0Rbw5BphJo9hgS5iM3q2Elbhn7zFUPJNfh1XnotKtvZGxWCwWi8XyP/EPydw0YAH0sjEAAAAASUVORK5CYII=" alt="profile_pic">
+     </div>
+     <div class="resume_content">
+       <div class="resume_item resume_info">
+         <div class="title">
+           <p class="bold">PRINCE DHANANI</p>
+           <p class="regular">Web Designer</p>
+         </div>
+         <ul>
+           <li>
+             <div class="icon">
+               <i class="fas fa-map-signs"></i>
+             </div>
+             <div class="data">
+              SOLA BRIGE, THALTEJ,<BR> AHMEDABAD
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-mobile-alt"></i>
+             </div>
+             <div class="data">
+               +91 94080 90765
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fas fa-envelope"></i>
+             </div>
+             <div class="data">
+               dhananiprince93@gmail.com
+             </div>
+           </li>
+         </ul>
+       </div>
+       <div class="resume_item resume_skills">
+         <div class="title">
+           <p class="bold">skill's</p>
+         </div>
+         <ul>
+           <li>
+             <div class="skill_name">
+               HTML
+             </div>
+             <div class="skill_progress">
+               <span style="width: 80%;"></span>
+             </div>
+             <div class="skill_per">80%</div>
+           </li>
+           <li>
+             <div class="skill_name">
+               CSS
+             </div>
+             <div class="skill_progress">
+               <span style="width: 70%;"></span>
+             </div>
+             <div class="skill_per">70%</div>
+           </li>
+           <li>
+             
+           <li>
+             <div class="skill_name">
+               JS
+             </div>
+             <div class="skill_progress">
+               <span style="width: 60%;"></span>
+             </div>
+             <div class="skill_per">60%</div>
+           </li>
+           <li>
+             
+         </ul>
+       </div>
+       <div class="resume_item resume_social">
+         <div class="title">
+           <p class="bold">Social</p>
+         </div>
+         <ul>
+           <li>
+             <div class="icon">
+               <i class="fab fa-facebook-square"></i>
+             </div>
+             <div class="data">
+              <p class="semi-bold">Fackbook</p>
+               <!-- <p class="semi-bold"></p> -->
+               <a href="">dhanani_prince_93</a> 
+               <!-- <p>Prince dhanani</p> -->
+             </div>
+           </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-instagram-square"></i>
+             </div>
+             <div class="data">    
+               <p class="semi-bold">instagram</p>
+               <p>dhanani_prince_93</p>
+             </div>
+           </li>
+           <li>
+            <div class="icon">
+              <i class="fab fa-github-square"></i>
+            </div>
+            <div class="data">
+              <p class="semi-bold">Github</p>
+              <!-- <p class="semi-bold"></p> -->
+              <a href="https://github.com/prince-dhanani/html-with-css">dhanani-prince</a> 
+              <!-- <p>Prince dhanani</p> -->
+            </div>
+          </li>
+           <li>
+             <div class="icon">
+               <i class="fab fa-linkedin"></i>
+             </div>
+             <div class="data">
+               <p class="semi-bold">Linkedin</p>
+               <p>Stephen@linkedin</p>
+             </div>
+           </li>
+         </ul>
+       </div>
+     </div>
+  </div>
+  <div class="resume_right">
+    <div class="resume_item resume_about">
+        <div class="title">
+           <p class="bold">About us</p>
+         </div>
+        <p>"I am Fraser, a detail-oriented and highly organized professional. With a strong background in [relevant field], I excel at [specific skills/areas of expertise]. I am dedicated to delivering high-quality work and thrive in fast-paced environments."</p>
+    </div>
+    <div class="resume_item resume_work">
+        <div class="title">
+           <p class="bold">Education</p>
+         </div>
+        <ul>
+            <li>
+                <div class="date"><U> 2018 </U></div> 
+                <div class="info">
+                     <p class="semi-bold">10<sup>th</sup></p> 
+                  <p> SURAT GURUKUL (SSGV) </p>
+                </div>
+            </li>
+            <li>
+              <div class="date"><U> 2020 - 2022 </U></div>
+              <div class="info">
+                     <p class="semi-bold">DEPLOMA IT </p> 
+                  <p>GOVERNMENT POLYTECHINIC RAJKOT </p>
+                  <P> 7.97 </P>
+                </div>
+            </li>
+            <li>
+              <div class="date"><U>2023 - Present</U></div>
+              <div class="info">
+                     <p class="semi-bold">B.TECH IT</p> 
+                  <p>SILVER OAK UNIVERSITY</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="resume_item resume_education">
+      <div class="title">
+           <p class="bold">CERTIFICATE</p>
+         </div>
+      <ul>
+            <li>
+                
+                <div class="info">
+                     <p class="semi-bold"><u>CORSERA</u></p>
+                     <BR> 
+                  <p>(1) Command Line In Linux</p>
+                  <p>(2) shell scripting </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="resume_item resume_education">
+        <div class="title">
+             <p class="bold"><u>PROJECT</u></p>
+           </div>
+        <ul>
+              <li>
+                  
+                  <div class="info">
+                       <p class="semi-bold"><u>ANDROID</u></p> 
+                       <BR>
+                    <p>(Vehical Bazzar) Application <br> in diploma level </p>
+                    
+                  </div>
+              </li>
+          </ul>
+      </div>
+    <div class="resume_item resume_hobby">
+      <div class="title">
+           <p class="bold">Hobby</p>
+         </div>
+       <ul>
+         <li><i class="fas fa-book"></i></li>
+         <li><i class="fas fa-camera"></i></li>
+         <li><i class="fas fa-music"></i></li>
+         <li><i class="fab fa-pagelines"></i></li>
+      </ul>
+    </div>
+  </div>
+</div>
+    
+</body>
+</html>
